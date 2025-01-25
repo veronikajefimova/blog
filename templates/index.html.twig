@@ -1,5 +1,11 @@
-{% if title %}
-    <h1>{{title}}</h1>
-{% else %}
-    <h1>Trips</h1>
-{% endif %}
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Trips page
+{% endblock %}
+
+{% block body %}
+   {% for trip in trips %}
+    <li>{{trip}}</li>
+   {% endfor %}
+{% endblock %}

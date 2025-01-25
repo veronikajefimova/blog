@@ -11,8 +11,10 @@ class TripsController extends AbstractController
     #[Route('/trips', name: 'app_trips')]
     public function index(): Response
     {
-        return $this->render('index.html.twig', [
-            'title' => 'Turkey'
-        ]);
+        $trips = ["Turkey", "Finland", "England", "Latvia"];
+
+        return $this->render('index.html.twig', array(
+            'trips' => $trips
+        ));
     }
 }
